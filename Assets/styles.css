@@ -3,9 +3,9 @@
 }
 
 :root {
-   --blue: rgba(45, 149, 240);
+   --blue: rgb(22, 123, 211);
    --red: rgba(235, 43, 43);
-   --lightBlue: rgba(45, 149, 240, 0.719);
+   --lightBlue: rgba(39, 136, 222, 0.8);
    --lightRed: rgba(235, 43, 43, 0.719);
    --white: rgb(255, 255, 255);
 

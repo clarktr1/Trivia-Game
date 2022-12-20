@@ -22,7 +22,6 @@ finishEl = document.getElementById('finish');
 listEl = document.getElementById('list');
 inputEl = document.getElementById('name');
 submitEl = document.getElementById('submit');
-wrongChoice = document.getElementById('wrong');
 
 // Timer
 
@@ -67,8 +66,14 @@ document.getElementById('correct4').addEventListener('click', toggleFive);
 document.getElementById('correct4').addEventListener('click', updateScore);
 document.getElementById('correct5').addEventListener('click', finalToggle);
 document.getElementById('correct5').addEventListener('click', updateScore);
-document.getElementById('start-again').addEventListener('click', returnHome);
-document.getElementById('wrong1').addEventListener('click', decrementTimer);
+document.getElementById('start-again').addEventListener('click', toggleFive);
+
+var wrongChoice = document.querySelectorAll('#wrong');
+console.log(wrongChoice);
+
+for (var button of wrongChoice) {
+    button.addEventListener('click', decrementTimer);
+}
 
 
 function updateScore() {
@@ -90,7 +95,6 @@ function toggleOne() {
 function toggleTwo() {
     questionOne.style.display = 'none';
     questionTwo.style.display = 'block'; 
-    audio.play();
 };
 
 function toggleThree() {
@@ -154,4 +158,5 @@ function returnHome(){
 
     // Extra Sounds
 
-
+    const ding = document.getElementById('correct-sound');
+ 
