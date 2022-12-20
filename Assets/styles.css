@@ -193,10 +193,14 @@ button {
 }
 
 /* Smartphones (portrait) ----------- */
-@media only screen 
-and (max-width : 320px) {
+@media screen 
+and (min-width : 480px) {
   html {
     overflow-y: scroll;
     overflow-y: scroll;
+  }
+
+  .question button {
+    width: 95%;
   }
 }
