@@ -202,5 +202,31 @@ and (max-width : 480px) {
 
   .question button {
     width: 95%;
+    height: auto;
+    padding-top: 30px;
+  }
+
+  .question-container {
+    width: 90%;
+  }
+
+.score-container {
+    width: 90%;
+}
+
+  .question ul {
+    margin: 0 auto;
+  }
+
+  #q4 {
+    font-size: 12px;
+  }
+
+  #intro {
+    font-size: 12px;
+  }
+
+  header {
+    margin-bottom: 6vh;
   }
 }
