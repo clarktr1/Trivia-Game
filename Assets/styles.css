@@ -99,16 +99,16 @@ button {
 .question ul {
     list-style: none;
     padding: 8px;
-    margin-left: 38%;
+    margin-left: 20%;
 }
 
 .question button {
-    margin: 8px 0;
+    margin: 4px 0;
     background-color: var(--blue);
     color: var(--white);
     border: 1px solid var(--white);
     border-radius: 6px;
-    width: 40%;
+    width: 80%;
     height: 30px;
     font-size: 20px;
     font-weight: bold;

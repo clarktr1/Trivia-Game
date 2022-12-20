@@ -38,7 +38,14 @@ function setTime() {
   
       if(secondsLeft === 0) {
         clearInterval(timerInterval);
+        questionOne.style.display = 'none';
+        questionTwo.style.display = 'none'
+        questionThree.style.display = 'none';
+        questionFour.style.display = 'none';
+        questionFive.style.display = 'none';
+        finishEl.style.display = 'block';
       }
+    
   
     }, 1000);
   }
