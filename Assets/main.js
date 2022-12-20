@@ -82,6 +82,16 @@ for (var button of wrongChoice) {
     button.addEventListener('click', decrementTimer);
 }
 
+function play() {
+    var audio = document.getElementById('audio');
+    if (audio.paused){
+        audio.play();
+    } else{
+        audio.play();
+        audio.currentTime = 0;
+    }
+}
+
 
 function updateScore() {
     let currentScore = parseInt(scoreEl.textContent, 10);
@@ -102,26 +112,31 @@ function toggleOne() {
 function toggleTwo() {
     questionOne.style.display = 'none';
     questionTwo.style.display = 'block'; 
+    play();
 };
 
 function toggleThree() {
     questionTwo.style.display = 'none';
     questionThree.style.display = 'block';
+    play()
 };
 
 function toggleFour() {
     questionThree.style.display = 'none';
     questionFour.style.display = 'block';
+    play()
 };
 
 function toggleFive() {
     questionFour.style.display = 'none';
     questionFive.style.display = 'block';
+    play()
 };
 
 function finalToggle(){
     questionFive.style.display = 'none';
     finishEl.style.display = 'block';
+    play()
     stopTimer();
 };
 

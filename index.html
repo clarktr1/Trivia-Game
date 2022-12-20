@@ -97,7 +97,7 @@
         <h2>Your score is: <span id='final-score'></span></h2>
     <form id="my-form">
         <h4>Log your score!</h4>
-        <input placeholder="Your Initials" type="text" minlegnth="0" maxlength="4" id="name">
+        <input placeholder="Your Initials" type="text" minlegnth="0" maxlength="4" id="name" required>
         <button id="submit">Submit</button>
     </form>
     <label>High Scores:</label>
@@ -107,9 +107,7 @@
     <button id="start-again">Play Again</button>
     </div>
     
-    <script src="./Assets/main.js"></script>
-    <footer>
-        <audio id="correct-sound" src="./Assets/Audio/ding-sound-effect_1.mp3"></audio>
-    </footer>
+    <audio id="audio" src="./Assets/Audio/ding-sound-effect_1.mp3"></audio>
+    <script src="./Assets/main.js"></script>   
 </body>
 </html>
