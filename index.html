@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <title>JavaScript Game</title>
+</head>
+<body>
+    <header>
+        <span id="time">30</span>
+        <span id="score">0</span>
+    </header>
+    <div class="intro-container" id="intro">
+        <h1>Coding Quiz Challenge</h1>
+        <p>This Coding Quiz challenge will test your knowledge on basic concepts of JavaScript and how well you can recall them. The rules are simple: answer the question correctly to gain points! However, answer a question wrong and you will LOSE time on the clock. So, you must be fast AND accurate. Scores are recorded and maintained in local storage. Please try your best and <b>have fun!</b></p>
+        <button id="high-score">View High Scores</button>
+        <button id="start">Start</button>
+    </div>
+
+    <div class="question-container" id="q1">
+        <div class="question">
+            <h3>Question 1:</h3>
+            <h2>
+                What does the 'i' in a for loop stand for?
+            </h2>
+            <ul>
+                <li><button id="wrong1">Input</button></li>
+                <li><button id="correct1">Index</button></li>
+                <li><button id="wrong">Invoke</button></li>
+                <li><button id="wrong">Indecies</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="question-container" id="q2">
+        <div class="question">
+            <h3>Question 2:</h3>
+            <h2>
+                What is the name of the object that represent the current web page in a broswer?
+            </h2>
+            <ul>
+                <li><button id="wrong">Window</button></li>
+                <li><button id="correct2">Object</button></li>
+                <li><button id="wrong">Element</button></li>
+                <li><button id="wrong">Function</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="question-container" id="q3">
+        <div class="question">
+            <h3>Question 3:</h3>
+            <h2>
+                What is the name of the function that is used to parse a string and return a floating point number in JavaScript?
+            </h2>
+            <ul>
+                <li><button id="wrong">parseString</button></li>
+                <li><button id="correct3">parseInt</button></li>
+                <li><button id="wrong">parseAll</button></li>
+                <li><button id="wrong">setFloatPoint</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="question-container" id="q4">
+        <div class="question">
+            <h3>Question 4:</h3>
+            <h2>
+                What is the purpose of 'typeof'?
+            </h2>
+            <ul>
+                <li><button id="wrong">Console log 'typeof'</button></li>
+                <li><button id="correct4">To show the type of a value</button></li>
+                <li><button id="wrong">To show the type of element</button></li>
+                <li><button id="wrong">Return character font</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="question-container" id="q5">
+        <div class="question">
+            <h3>Question 5:</h3>
+            <h2>
+                What is the syntax for creating a comment in JavaScript?
+            </h2>
+            <ul>
+                <li><button id="wrong">/*</button></li>
+                <li><button id="correct5">//</button></li>
+                <li><button id="wrong">!--</button></li>
+                <li><button id="wrong">\\</button></li>
+            </ul>
+        </div>
+    </div>
+    <div class="score-container" id="finish">
+        <h3>Great Job!</h3>
+        <h2>Your score is: <span id='final-score'></span></h2>
+    <form id="my-form">
+        <h4>Log your score!</h4>
+        <input type="text" minlegnth="0" maxlength="4" id="name">
+        <button type="submit" id="submit">Submit</button>
+    </form>
+    <label>High Scores:</label>
+    <ol id="list">
+
+    </ol> 
+    <button id="start-again">Play Again</button>
+    </div>
+    
+    <script src="./Assets/main.js"></script>
+</body>
+</html>
