@@ -153,11 +153,15 @@ button {
 }
 
 .score-container ol {
-    padding: 2% 0 2% 2%;
+    padding: 2% 4% 2% 6%;
     border-radius: 6px;
     margin: 4px auto;
     border: 1px solid gray;
     width: 30%;
+}
+
+.score-container li {
+    margin-right: 8%;
 }
 
 #intro {

@@ -50,6 +50,7 @@ function stopTimer (){
 
 function decrementTimer() {
     secondsLeft -= 5;
+    alert('Wrong! Try again');
   }
 
 // Change Display
@@ -69,6 +70,7 @@ document.getElementById('correct5').addEventListener('click', updateScore);
 document.getElementById('start-again').addEventListener('click', returnHome);
 document.getElementById('wrong1').addEventListener('click', decrementTimer);
 
+
 function updateScore() {
     let currentScore = parseInt(scoreEl.textContent, 10);
     currentScore += secondsLeft;
@@ -83,12 +85,12 @@ function viewScore() {
 function toggleOne() {
     intro.style.display = 'none';
     questionOne.style.display = 'block';   
-    updateScore; 
 };
 
 function toggleTwo() {
     questionOne.style.display = 'none';
-    questionTwo.style.display = 'block';  
+    questionTwo.style.display = 'block'; 
+    audio.play();
 };
 
 function toggleThree() {
@@ -108,13 +110,16 @@ function toggleFive() {
 
 function finalToggle(){
     questionFive.style.display = 'none';
-    finishEl.style.display = 'block'
+    finishEl.style.display = 'block';
     stopTimer();
 };
 
 function returnHome(){
-    finishEl.style.display = 'none'
-    intro.style.display = 'block'
+    finishEl.style.display = 'none';
+    intro.style.display = 'block';
+    secondsLeft = 30;
+    scoreEl.textContent = 0;
+    timeEl.textContent = 30;
 };
 
 
@@ -131,18 +136,22 @@ function returnHome(){
         localStorage.setItem('name', inputValue);
     };
 
-    var storedScore = localStorage.getItem('score');
-    var storedName = localStorage.getItem('name');
-    console.log(storedScore, storedName);
+  
     function addToList(event) {
+ 
         console.log(submitEl);
         event.preventDefault();
         saveScore();
         saveName();
+        var storedScore = localStorage.getItem('score');
+        var storedName = localStorage.getItem('name');
 
         var listItem = document.createElement('li');
-        listItem.textContent = storedName + storedScore;
+        listItem.textContent = storedName + "   " + storedScore;
 
         listEl.appendChild(listItem);
     };
+
+    // Extra Sounds
+
 
