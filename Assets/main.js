@@ -73,7 +73,7 @@ document.getElementById('correct4').addEventListener('click', toggleFive);
 document.getElementById('correct4').addEventListener('click', updateScore);
 document.getElementById('correct5').addEventListener('click', finalToggle);
 document.getElementById('correct5').addEventListener('click', updateScore);
-document.getElementById('start-again').addEventListener('click', toggleFive);
+document.getElementById('start-again').addEventListener('click', returnHome);
 
 var wrongChoice = document.querySelectorAll('#wrong');
 console.log(wrongChoice);
