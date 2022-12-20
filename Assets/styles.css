@@ -191,3 +191,12 @@ button {
 #finish {
     display: none;
 }
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+  html {
+    overflow-y: scroll;
+    overflow-y: scroll;
+  }
+}
