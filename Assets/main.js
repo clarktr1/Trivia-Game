@@ -119,9 +119,7 @@ function returnHome(){
 
 
 //Set to Local Storage
-    submitEl = document.querySelector('#submit');
-    submitEl.addEventListener('submit', addToList);
-
+    submitEl.addEventListener('click', addToList);
     function saveScore(){
 
         var finalScore = scoreEl.textContent;
@@ -133,17 +131,18 @@ function returnHome(){
         localStorage.setItem('name', inputValue);
     };
 
-    var storedScore = localStorage.getItem('score')
-    var storedName = localStorage.getItem('name')
-
+    var storedScore = localStorage.getItem('score');
+    var storedName = localStorage.getItem('name');
+    console.log(storedScore, storedName);
     function addToList(event) {
+        console.log(submitEl);
         event.preventDefault();
-        saveScore;
-        saveName;
+        saveScore();
+        saveName();
 
         var listItem = document.createElement('li');
         listItem.textContent = storedName + storedScore;
 
-        listEl.appendchild(listItem);
+        listEl.appendChild(listItem);
     };
 
