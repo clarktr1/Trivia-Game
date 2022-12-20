@@ -195,10 +195,6 @@ button {
 /* Smartphones (portrait) ----------- */
 @media screen 
 and (max-width : 480px) {
-  html {
-    overflow-y: scroll;
-    overflow-y: scroll;
-  }
 
   .question button {
     width: 95%;
@@ -226,7 +222,17 @@ and (max-width : 480px) {
     font-size: 12px;
   }
 
+  #high-score {
+    position: absolute;
+    bottom: 12px;
+    right: 25%;
+  }
+
   header {
-    margin-bottom: 6vh;
+    margin-bottom: 4vh;
+  }
+
+  #list {
+    height: 90px;
   }
 }
