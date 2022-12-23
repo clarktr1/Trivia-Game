@@ -74,7 +74,6 @@ document.getElementById('correct4').addEventListener('click', updateScore);
 document.getElementById('correct5').addEventListener('click', finalToggle);
 document.getElementById('correct5').addEventListener('click', updateScore);
 document.getElementById('start-again').addEventListener('click', returnHome);
-
 var wrongChoice = document.querySelectorAll('#wrong');
 console.log(wrongChoice);
 
@@ -97,6 +96,8 @@ function updateScore() {
     let currentScore = parseInt(scoreEl.textContent, 10);
     currentScore += secondsLeft;
     scoreEl.textContent = currentScore;
+    var lastScore = document.getElementById('final-score');
+    lastScore.textContent = scoreEl.textContent;
 };
 
 function viewScore() {
@@ -138,6 +139,7 @@ function finalToggle(){
     finishEl.style.display = 'block';
     play()
     stopTimer();
+    
 };
 
 function returnHome(){
@@ -147,6 +149,7 @@ function returnHome(){
     scoreEl.textContent = 0;
     timeEl.textContent = 30;
 };
+
 
 
 //Set to Local Storage

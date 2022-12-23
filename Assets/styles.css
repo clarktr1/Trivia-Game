@@ -222,14 +222,8 @@ and (max-width : 480px) {
     font-size: 12px;
   }
 
-  #high-score {
-    position: absolute;
-    bottom: 12px;
-    right: 25%;
-  }
-
   header {
-    margin-bottom: 4vh;
+    margin-bottom: 2vh;
   }
 
   #list {
