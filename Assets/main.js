@@ -36,7 +36,7 @@ function setTime() {
       secondsLeft--;
       timeEl.textContent = secondsLeft;
   
-      if(secondsLeft === 0) {
+      if(secondsLeft <= 0) {
         clearInterval(timerInterval);
         questionOne.style.display = 'none';
         questionTwo.style.display = 'none'
@@ -44,6 +44,8 @@ function setTime() {
         questionFour.style.display = 'none';
         questionFive.style.display = 'none';
         finishEl.style.display = 'block';
+
+        timeEl.textContent = 0;
       }
     
   
@@ -55,9 +57,11 @@ function stopTimer (){
 };
 
 function decrementTimer() {
+
     secondsLeft -= 5;
-    alert('Wrong! Try again');
-  }
+    alert('Wrong! Try again.');
+
+};
 
 // Change Display
 
@@ -98,6 +102,9 @@ function updateScore() {
     scoreEl.textContent = currentScore;
     var lastScore = document.getElementById('final-score');
     lastScore.textContent = scoreEl.textContent;
+    if (scoreEl.textContent = '0') {
+        lastScore.textContent = '0';
+    }
 };
 
 function viewScore() {
