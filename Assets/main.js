@@ -44,8 +44,6 @@ function setTime() {
         questionFour.style.display = 'none';
         questionFive.style.display = 'none';
         finishEl.style.display = 'block';
-
-        timeEl.textContent = 0;
       }
     
   
@@ -97,14 +95,11 @@ function play() {
 
 
 function updateScore() {
-    let currentScore = parseInt(scoreEl.textContent, 10);
+    var currentScore = parseInt(scoreEl.textContent, 10);
     currentScore += secondsLeft;
     scoreEl.textContent = currentScore;
     var lastScore = document.getElementById('final-score');
     lastScore.textContent = scoreEl.textContent;
-    if (scoreEl.textContent = '0') {
-        lastScore.textContent = '0';
-    }
 };
 
 function viewScore() {
